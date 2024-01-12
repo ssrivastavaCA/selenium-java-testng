@@ -17,9 +17,7 @@ import example.example.context.WebDriverContext;
 import example.example.listeners.LogListener;
 import example.example.listeners.ReportListener;
 import example.example.util.LoggerUtil;
-import example.example.util.MailUtil;
 import example.example.util.TestProperties;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * Every test class should extend this calss.
@@ -55,8 +53,6 @@ public class BaseTest {
 		LoggerUtil.log("Number of testcases Passed : " + passed);
 		LoggerUtil.log("Number of testcases Failed : " + failed);
 		LoggerUtil.log("Number of testcases Skipped  : " + skipped);
-		boolean mailSent = MailUtil.sendMail(total, passed, failed, skipped);
-		LoggerUtil.log("Mail sent : " + mailSent);
 		LoggerUtil.log("************************** Test Execution Finished ************************************");
 	}
 

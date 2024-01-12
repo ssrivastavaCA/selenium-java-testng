@@ -21,6 +21,6 @@ public class GoogleSearchTest extends BaseTest {
 		driver.get("https://www.google.com/");
 		GooglePage googlePage = PageinstancesFactory.getInstance(GooglePage.class);
 		googlePage.searchText("java");
-		Assert.assertTrue(driver.getTitle().contains("java"), "Title contain java : Test Passed");
+		Assert.assertTrue(googlePage.searchresult.getText().contains("Java"), "Title contain java : Test Passed");
 	}
 }

@@ -15,6 +15,10 @@ public class GooglePage extends BasePage {
 	@FindBy(name = "q")
 	private WebElement searchinput;
 
+	/** The First search result. */
+	@FindBy(xpath = "(//h3)[1]")
+	public WebElement searchresult;
+
 	/**
 	 * Instantiates a new google page.
 	 *
